@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Image Crop</title>
 </head>
 
 <body>
     <div style="margin: 10px;">
         <label for="image">Select Image</label><br>
-        <input type="file" name="imageUploaded" id="image" accept="image/*" />
+        <input type="file" name="imageUploaded" id="image" accept="image/*" class="file-input"/>
     </div>
 
     <div class="inputoutput">
@@ -20,19 +23,20 @@
     
 
     <div style="display: flex; padding: 10px;">
-        <div>
-            <label for="height">Enter Height</label><br>
-            <input type="text" name="height" id="height" />
-        </div>
+            <div class="form-group">
 
-        <div>
+                <label for="height">Enter Height</label><br>
+                <input type="text" name="height" id="height" class="form-control" />
+            </div>
+
+        <div style="margin-left: 10px;">
             <label for="width">Enter Width</label><br>
-            <input type="text" name="width" id="width" />
+            <input type="text" name="width" id="width" class="form-control"/>
         </div>
     </div>
 
     <div style="margin: 10px;">
-        <button type="button" id="cropbtn">Crop</button>
+        <button type="button" id="cropbtn" class="btn btn-primary">Crop Image</button>
     </div>
 
     <div>
@@ -40,7 +44,7 @@
     </div>
 
     <div style="margin: 10px;">
-        <button type="button" id="download">Download Image</button>
+        <button type="button" id="download" class="btn btn-primary">Download Image</button>
     </div>
 
     <script src="imageCrop.js"></script>
